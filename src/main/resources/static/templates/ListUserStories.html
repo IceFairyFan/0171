@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>User Stories</title>
+    <link href="css/loginstyles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'http://localhost:8080/api/v1/blog',
+                type: 'GET',
+                // data: fd,
+                contentType: false,
+                processData: false,
+                dataType: 'json',
+                // beforeSend: function () {
+                //     // Show image container
+                //     $("#btn_confirm_yes").prop("disabled", true);
+                //     $("#btn_confirm_no").prop("disabled", true);
+                //     $("#btn_confirm_yes").text("Please wait...");
+                // },
+                success: function (response) {
+                 alert(JSON.stringify(response));
+                }
+            });
+                    });
+    </script>
+</head>
+
+
+
+<body>
+    <header>
+        <div class="containerLogo">
+            <img src="assets/Logo.svg" alt="logo" class="logo">
+        </div>
+    </header>
+
+    <span class="containerHeaderUS">
+        <span class="containerBack">
+            <img style="vertical-align:middle" src="assets/back-button.svg" alt="back" class="btnBack">
+            <button type="button" id="back-button">Back to Project</button>
+        </span>
+
+        <span>
+            <button type="button" id="export-button">Export User Stories</button>
+            <a href="upload">Export User Stories</a>
+        </span>
+
+    </span>
+
+    <!--<div class="meetingName">
+
+    </div>-->
+
+    <br /> <br /> <br /> <br /><br /> <br />
+
+    <div class="listUserStories">
+        <table>
+            <col style="width:80%">
+            <col style="width:15%">
+            <col style="width:15%">
+
+            <thead>
+                <tr>
+                    <th>User Stories</th>
+                    <th>Task Type</th>
+                    <th>Priorities</th>
+                </tr>
+
+        </table>
+    </div>
+
+</body>
+</html>
