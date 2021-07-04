@@ -47,13 +47,13 @@ public class BlogMockedData {
 //        blogs.add(new Blog(6, "Kost", "created", "submitted GP"));
 //        blogs.add(new Blog(7, "changes", "made", "number of listing"));
 
-        blogs.add(new Blog(1, "Aktif", "needs"));
-        blogs.add(new Blog(2, "request", "auto-create"));
-        blogs.add(new Blog(3, "Owner", "been"));
-        blogs.add(new Blog(4, "Invoice", "be"));
-        blogs.add(new Blog(5, "widget", "triggered"));
-        blogs.add(new Blog(6, "Kost", "created"));
-        blogs.add(new Blog(7, "changes", "made"));
+        blogs.add(new Blog(1, "request", "given"));
+        blogs.add(new Blog(2, "auto", "think"));
+        blogs.add(new Blog(3, "code", "be"));
+        blogs.add(new Blog(4, "Page", "proceed"));
+        blogs.add(new Blog(5, "OTP", "need"));
+        blogs.add(new Blog(6, "Users", "allowed"));
+        blogs.add(new Blog(7, "secret", "inputted"));
 
 
 

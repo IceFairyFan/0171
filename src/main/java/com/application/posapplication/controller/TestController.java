@@ -9,7 +9,6 @@ import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,6 +34,14 @@ public class TestController {
                 .map(CoreLabel::originalText)
                 .collect(Collectors.toList());
     }
+
+//    private List<String> collectList(List<CoreLabel> coreLabels, final Modal modal){
+//        return coreLabels
+//                .stream()
+//                .filter(coreLabel -> modal.getName().equalsIgnoreCase(coreLabel.get(CoreAnnotations.PartOfSpeechAnnotation.class)))
+//                .map(CoreLabel::originalText)
+//                .collect(Collectors.toList());
+//    }
 
     BlogMockedData blogMockedData = BlogMockedData.getInstance();
 
@@ -120,7 +127,8 @@ public class TestController {
 
     @GetMapping("/blog")
     public List<Blog> index(){
-        return blogMockedData.fetchBlogs();
+//        return blogMockedData.fetchBlogs();
+        return blogMockedData.searchBlogs("a");
     }
 
     @GetMapping("/blog/{id}")
@@ -163,8 +171,4 @@ public class TestController {
         blogMockedData.toString();
         return "text";
     }
-
-
-
-
 }
